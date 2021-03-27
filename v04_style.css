@@ -1,0 +1,94 @@
+  body {
+    width: 100%;
+  }
+    table, th, td {
+    white-space: nowrap;
+    border: 1px solid black;
+    border-collapse: collapse;
+  }
+  td.data {
+    font-size:80%;
+  }
+  th.date {
+    font-size:50%;
+  }
+  th.name {
+    font-size:50%;
+  }
+  th.vl_yellow, td.vl_yellow {
+    background-color: yellow
+  }
+  th.vl_purple, td.vl_purple {
+    background-color: purple
+  }
+  th.vl_orange, td.vl_orange {
+    background-color: orange
+  }
+  .smaller {
+    font-size:80%;
+  }
+  td.grey {
+    background-color: lightgrey;
+  }
+  td.up100 {
+    background-color: darkred;
+  }
+  td.up50 {
+    background-color: red;
+  }
+  td.up25 {
+    background-color: orangered;
+  }
+  td.up10 {
+    background-color: salmon;
+  }
+  td.up5 {
+    background-color: pink;
+  }
+  td.dn50 {
+    background-color: green;
+  }
+  td.dn25 {
+    background-color: mediumseagreen;
+  }
+  td.dn10 {
+    background-color: lightgreen;
+  }
+  td.dn5 {
+    background-color: palegreen;
+  }
+  td.eq {
+    background-color: lightyellow;
+  }
+  div.space10 {
+    height:10px;
+  }
+  div.space20 {
+    height:20px;
+  }
+  div.totals {
+    width: 99%;
+  }
+  table.tottab {
+    float : right;
+    width: 99%;
+  }
+  div.notes {
+    clear: both;
+  }
+  div#breadcrumb  {
+    font-size: 90%;
+  }  
+  a.breadcrumb:link {
+      text-decoration: none;
+  }
+  a.breadcrumb:visited {
+      text-decoration: none;
+  }
+  a.breadcrumb:hover {
+      text-decoration: underline;
+  }  
+  a.breadcrumb:active {
+      text-decoration: underline;
+  }
+     
