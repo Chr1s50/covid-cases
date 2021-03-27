@@ -1,90 +1,12 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
 <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
-<script src="v03.js"></script>
-
-<style type=text/css> 
-  body {
-    width: 100%;
-  }
-    table, th, td {
-    white-space: nowrap;
-    border: 1px solid black;
-    border-collapse: collapse;
-  }
-  td.data {
-    font-size:80%;
-  }
-  th.date {
-    font-size:50%;
-  }
-  th.name {
-    font-size:50%;
-  }
-  th.vl_yellow, td.vl_yellow {
-    background-color: yellow
-  }
-  th.vl_purple, td.vl_purple {
-    background-color: purple
-  }
-  th.vl_orange, td.vl_orange {
-    background-color: orange
-  }
-  .smaller {
-    font-size:80%;
-  }
-  td.grey {
-    background-color: lightgrey;
-  }
-  td.up100 {
-    background-color: darkred;
-  }
-  td.up50 {
-    background-color: red;
-  }
-  td.up25 {
-    background-color: orangered;
-  }
-  td.up10 {
-    background-color: salmon;
-  }
-  td.up5 {
-    background-color: pink;
-  }
-  td.dn50 {
-    background-color: green;
-  }
-  td.dn25 {
-    background-color: mediumseagreen;
-  }
-  td.dn10 {
-    background-color: lightgreen;
-  }
-  td.dn5 {
-    background-color: palegreen;
-  }
-  td.eq {
-    background-color: lightyellow;
-  }
-  div.space10 {
-    height:10px;
-  }
-  div.space20 {
-    height:20px;
-  }
-  div.totals {
-    width: 99%;
-  }
-  table.tottab {
-    float : right;
-    width: 99%;
-  }
-  div.notes {
-    clear: both;
-  }
-</style>
+<script src="v04.js"></script>
+<script src="v04ukcases.js"></script>
+<link rel="stylesheet" href="v04_style.css">
+<a href="index.html">COVID-19 statistics</a> > <a href="index_uk.html">England</a> > Cases last 14 days
 <h2>COVID-19 Cases in England - changes in weekly values for last $optctl{recent} days</h2>
-Last updated on 27-Mar-2021 at 17:19:49
+Last updated on 27-Mar-2021 at 17:28:39
 
 <p><label for='search'>Search:</label><input type='text' id='search' ></p>
 <table>
@@ -251,10 +173,10 @@ Last updated on 27-Mar-2021 at 17:19:49
  <tr class='a em' >
  <td></td> <td></td> <td></td> <td></td> <td></td> <td></td> <td></td> <td></td> <td></td> <td></td> <td></td> <td></td> <td></td> <td></td> <td></td>  <td class='data'></td>  <td></td>
  </tr>
- <tr id='eastmidlands' class='a em'>
+ <tr id='eastmidlands' class='a em em'>
   <td class='dn5' title="13/03: : East Midlands 90->83 -7.8%"></td>  <td class='dn10' title="14/03: : East Midlands 90->80 -11.1%"></td>  <td class='dn5' title="15/03: : East Midlands 86->80 -7.0%"></td>  <td class='dn5' title="16/03: : East Midlands 85->78 -8.2%"></td>  <td class='dn5' title="17/03: : East Midlands 84->78 -7.1%"></td>  <td class='dn10' title="18/03: : East Midlands 85->76 -10.6%"></td>  <td class='dn10' title="19/03: : East Midlands 86->70 -18.6%"></td>  <td class='dn10' title="20/03: : East Midlands 83->72 -13.3%"></td>  <td class='eq' title="21/03: : East Midlands 80->77 -3.8%"></td>  <td class='eq' title="22/03: : East Midlands 80->78 -2.5%"></td>  <td class='eq' title="23/03: : East Midlands 78->79 +1.3%"></td>  <td class='eq' title="24/03: : East Midlands 78->77 -1.3%"></td>  <td class='eq' title="25/03: : East Midlands 76->76 +0.0%"></td>  <td class='up10' title="26/03: : East Midlands 70->80 +14.3%"></td>  <td class='up5' title="27/03: : East Midlands 72->77 +6.9%"></td>  <td class='data'>East Midlands</td>  <td class='data'>EM</td>
  </tr>
- <tr class='a em' >
+ <tr class='a em em' >
  <td></td> <td></td> <td></td> <td></td> <td></td> <td></td> <td></td> <td></td> <td></td> <td></td> <td></td> <td></td> <td></td> <td></td> <td></td>  <td class='data'></td>  <td></td>
  </tr>
  <tr id='bedford' class='a e'>
@@ -387,7 +309,7 @@ Last updated on 27-Mar-2021 at 17:19:49
   <td class='up10 nld' title="13/03: NLD: Great Yarmouth 29->35 +20.7%"></td>  <td class='up25 nld' title="14/03: NLD: Great Yarmouth 26->33 +26.9%"></td>  <td class='up50 nld' title="15/03: NLD: Great Yarmouth 23->37 +60.9%"></td>  <td class='up50 nld' title="16/03: NLD: Great Yarmouth 22->36 +63.6%"></td>  <td class='up25 nld' title="17/03: NLD: Great Yarmouth 25->32 +28.0%"></td>  <td class='up10 nld' title="18/03: NLD: Great Yarmouth 24->30 +25.0%"></td>  <td class='dn10 nld' title="19/03: NLD: Great Yarmouth 30->23 -23.3%"></td>  <td class='eq nld' title="20/03: NLD: Great Yarmouth 35->19 -45.7%"></td>  <td class='dn25 nld' title="21/03: NLD: Great Yarmouth 33->21 -36.4%"></td>  <td class='eq nld' title="22/03: NLD: Great Yarmouth 37->17 -54.1%"></td>  <td class='eq nld' title="23/03: NLD: Great Yarmouth 36->17 -52.8%"></td>  <td class='eq nld' title="24/03: NLD: Great Yarmouth 32->16 -50.0%"></td>  <td class='eq nld' title="25/03: NLD: Great Yarmouth 30->14 -53.3%"></td>  <td class='eq nld' title="26/03: NLD: Great Yarmouth 23->13 -43.5%"></td>  <td class='eq nld' title="27/03: NLD: Great Yarmouth 19->14 -26.3%"></td>  <td class='data'>Great Yarmouth</td>  <td class='data'>E</td>
  </tr>
  <tr id='kingslynnandwestnorfolk' class='a e'>
-  <td class='up5 nld' title="13/03: NLD: King's Lynn and West Norfolk 58->63 +8.6%"></td>  <td class='up10 nld' title="14/03: NLD: King's Lynn and West Norfolk 52->64 +23.1%"></td>  <td class='up25 nld' title="15/03: NLD: King's Lynn and West Norfolk 52->68 +30.8%"></td>  <td class='up10 nld' title="16/03: NLD: King's Lynn and West Norfolk 55->68 +23.6%"></td>  <td class='eq nld' title="17/03: NLD: King's Lynn and West Norfolk 58->60 +3.4%"></td>  <td class='up5 nld' title="18/03: NLD: King's Lynn and West Norfolk 56->60 +7.1%"></td>  <td class='dn10 nld' title="19/03: NLD: King's Lynn and West Norfolk 66->50 -24.2%"></td>  <td class='dn25 nld' title="20/03: NLD: King's Lynn and West Norfolk 63->47 -25.4%"></td>  <td class='dn25 nld' title="21/03: NLD: King's Lynn and West Norfolk 64->43 -32.8%"></td>  <td class='dn25 nld' title="22/03: NLD: King's Lynn and West Norfolk 68->41 -39.7%"></td>  <td class='dn25 nld' title="23/03: NLD: King's Lynn and West Norfolk 68->40 -41.2%"></td>  <td class='dn25 nld' title="24/03: NLD: King's Lynn and West Norfolk 60->42 -30.0%"></td>  <td class='dn10 nld' title="25/03: NLD: King's Lynn and West Norfolk 60->46 -23.3%"></td>  <td class='dn10 nld' title="26/03: NLD: King's Lynn and West Norfolk 50->44 -12.0%"></td>  <td class='dn5 nld' title="27/03: NLD: King's Lynn and West Norfolk 47->44 -6.4%"></td>  <td class='data'>King's Lynn+</td>  <td class='data'>E</td>
+  <td class='up5 nld' title="13/03: NLD: King's Lynn and West Norfolk 58->63 +8.6%"></td>  <td class='up10 nld' title="14/03: NLD: King's Lynn and West Norfolk 52->64 +23.1%"></td>  <td class='up25 nld' title="15/03: NLD: King's Lynn and West Norfolk 52->68 +30.8%"></td>  <td class='up10 nld' title="16/03: NLD: King's Lynn and West Norfolk 55->68 +23.6%"></td>  <td class='eq nld' title="17/03: NLD: King's Lynn and West Norfolk 58->60 +3.4%"></td>  <td class='up5 nld' title="18/03: NLD: King's Lynn and West Norfolk 56->60 +7.1%"></td>  <td class='dn10 nld' title="19/03: NLD: King's Lynn and West Norfolk 66->50 -24.2%"></td>  <td class='dn25 nld' title="20/03: NLD: King's Lynn and West Norfolk 63->47 -25.4%"></td>  <td class='dn25 nld' title="21/03: NLD: King's Lynn and West Norfolk 64->43 -32.8%"></td>  <td class='dn25 nld' title="22/03: NLD: King's Lynn and West Norfolk 68->41 -39.7%"></td>  <td class='dn25 nld' title="23/03: NLD: King's Lynn and West Norfolk 68->40 -41.2%"></td>  <td class='dn25 nld' title="24/03: NLD: King's Lynn and West Norfolk 60->42 -30.0%"></td>  <td class='dn10 nld' title="25/03: NLD: King's Lynn and West Norfolk 60->46 -23.3%"></td>  <td class='dn10 nld' title="26/03: NLD: King's Lynn and West Norfolk 50->44 -12.0%"></td>  <td class='dn5 nld' title="27/03: NLD: King's Lynn and West Norfolk 47->44 -6.4%"></td>  <td class='data'>King's Lynn and West Norfolk</td>  <td class='data'>E</td>
  </tr>
  <tr id='northnorfolk' class='a e'>
   <td class='eq nld' title="13/03: NLD: North Norfolk 13->12 -7.7%"></td>  <td class='eq nld' title="14/03: NLD: North Norfolk 12->13 +8.3%"></td>  <td class='eq nld' title="15/03: NLD: North Norfolk 8->16 +100.0%"></td>  <td class='eq nld' title="16/03: NLD: North Norfolk 11->13 +18.2%"></td>  <td class='eq nld' title="17/03: NLD: North Norfolk 11->13 +18.2%"></td>  <td class='eq nld' title="18/03: NLD: North Norfolk 9->19 +111.1%"></td>  <td class='eq nld' title="19/03: NLD: North Norfolk 14->15 +7.1%"></td>  <td class='eq nld' title="20/03: NLD: North Norfolk 12->17 +41.7%"></td>  <td class='eq nld' title="21/03: NLD: North Norfolk 13->16 +23.1%"></td>  <td class='eq nld' title="22/03: NLD: North Norfolk 16->17 +6.2%"></td>  <td class='eq nld' title="23/03: NLD: North Norfolk 13->16 +23.1%"></td>  <td class='eq nld' title="24/03: NLD: North Norfolk 13->19 +46.2%"></td>  <td class='eq nld' title="25/03: NLD: North Norfolk 19->18 -5.3%"></td>  <td class='eq nld' title="26/03: NLD: North Norfolk 15->18 +20.0%"></td>  <td class='eq nld' title="27/03: NLD: North Norfolk 17->20 +17.6%"></td>  <td class='data'>North Norfolk</td>  <td class='data'>E</td>
@@ -425,13 +347,13 @@ Last updated on 27-Mar-2021 at 17:19:49
  <tr class='a e' >
  <td></td> <td></td> <td></td> <td></td> <td></td> <td></td> <td></td> <td></td> <td></td> <td></td> <td></td> <td></td> <td></td> <td></td> <td></td>  <td class='data'></td>  <td></td>
  </tr>
- <tr id='eastofengland' class='a e'>
+ <tr id='eastofengland' class='a e e'>
   <td class='dn5' title="13/03: : East of England 51->46 -9.8%"></td>  <td class='dn5' title="14/03: : East of England 50->45 -10.0%"></td>  <td class='dn5' title="15/03: : East of England 49->46 -6.1%"></td>  <td class='dn5' title="16/03: : East of England 49->46 -6.1%"></td>  <td class='eq' title="17/03: : East of England 47->46 -2.1%"></td>  <td class='dn5' title="18/03: : East of England 47->44 -6.4%"></td>  <td class='dn10' title="19/03: : East of England 48->43 -10.4%"></td>  <td class='dn5' title="20/03: : East of England 46->43 -6.5%"></td>  <td class='eq' title="21/03: : East of England 45->44 -2.2%"></td>  <td class='eq' title="22/03: : East of England 46->45 -2.2%"></td>  <td class='eq' title="23/03: : East of England 46->44 -4.3%"></td>  <td class='eq' title="24/03: : East of England 46->44 -4.3%"></td>  <td class='eq' title="25/03: : East of England 44->46 +4.5%"></td>  <td class='eq' title="26/03: : East of England 43->45 +4.7%"></td>  <td class='eq' title="27/03: : East of England 43->43 +0.0%"></td>  <td class='data'>East</td>  <td class='data'>E</td>
  </tr>
- <tr class='a e' >
+ <tr class='a e e' >
  <td></td> <td></td> <td></td> <td></td> <td></td> <td></td> <td></td> <td></td> <td></td> <td></td> <td></td> <td></td> <td></td> <td></td> <td></td>  <td class='data'></td>  <td></td>
  </tr>
- <tr class='a e' >
+ <tr class='a e e' >
  <td></td> <td></td> <td></td> <td></td> <td></td> <td></td> <td></td> <td></td> <td></td> <td></td> <td></td> <td></td> <td></td> <td></td> <td></td>  <td class='data'></td>  <td></td>
  </tr>
  <tr id='barkinganddagenham' class='a l'>
@@ -530,10 +452,10 @@ Last updated on 27-Mar-2021 at 17:19:49
  <tr id='westminster' class='a l'>
   <td class='dn10 nld' title="13/03: NLD: Westminster 40->33 -17.5%"></td>  <td class='dn25 nld' title="14/03: NLD: Westminster 42->30 -28.6%"></td>  <td class='dn5 nld' title="15/03: NLD: Westminster 37->34 -8.1%"></td>  <td class='dn10 nld' title="16/03: NLD: Westminster 38->34 -10.5%"></td>  <td class='eq nld' title="17/03: NLD: Westminster 35->35 +0.0%"></td>  <td class='eq nld' title="18/03: NLD: Westminster 34->35 +2.9%"></td>  <td class='eq nld' title="19/03: NLD: Westminster 34->33 -2.9%"></td>  <td class='eq nld' title="20/03: NLD: Westminster 33->33 +0.0%"></td>  <td class='dn10 nld' title="21/03: NLD: Westminster 30->26 -13.3%"></td>  <td class='dn10 nld' title="22/03: NLD: Westminster 34->27 -20.6%"></td>  <td class='dn5 nld' title="23/03: NLD: Westminster 34->31 -8.8%"></td>  <td class='dn5 nld' title="24/03: NLD: Westminster 35->32 -8.6%"></td>  <td class='dn10 nld' title="25/03: NLD: Westminster 35->27 -22.9%"></td>  <td class='dn10 nld' title="26/03: NLD: Westminster 33->29 -12.1%"></td>  <td class='dn10 nld' title="27/03: NLD: Westminster 33->25 -24.2%"></td>  <td class='data'>Westminster</td>  <td class='data'>L</td>
  </tr>
- <tr id='london' class='a l'>
+ <tr id='london' class='a l l'>
   <td class='dn5 nld' title="13/03: NLD: London 44->41 -6.8%"></td>  <td class='dn5 nld' title="14/03: NLD: London 43->40 -7.0%"></td>  <td class='eq nld' title="15/03: NLD: London 42->40 -4.8%"></td>  <td class='dn5 nld' title="16/03: NLD: London 42->38 -9.5%"></td>  <td class='eq nld' title="17/03: NLD: London 41->39 -4.9%"></td>  <td class='dn10 nld' title="18/03: NLD: London 42->37 -11.9%"></td>  <td class='dn10 nld' title="19/03: NLD: London 42->35 -16.7%"></td>  <td class='dn10 nld' title="20/03: NLD: London 41->35 -14.6%"></td>  <td class='dn10 nld' title="21/03: NLD: London 40->35 -12.5%"></td>  <td class='dn5 nld' title="22/03: NLD: London 40->36 -10.0%"></td>  <td class='dn5 nld' title="23/03: NLD: London 38->36 -5.3%"></td>  <td class='dn5 nld' title="24/03: NLD: London 39->36 -7.7%"></td>  <td class='eq nld' title="25/03: NLD: London 37->37 +0.0%"></td>  <td class='up5 nld' title="26/03: NLD: London 35->38 +8.6%"></td>  <td class='up5 nld' title="27/03: NLD: London 35->37 +5.7%"></td>  <td class='data'>London</td>  <td class='data'>L</td>
  </tr>
- <tr class='a l' >
+ <tr class='a l l' >
  <td></td> <td></td> <td></td> <td></td> <td></td> <td></td> <td></td> <td></td> <td></td> <td></td> <td></td> <td></td> <td></td> <td></td> <td></td>  <td class='data'></td>  <td></td>
  </tr>
  <tr id='countydurham' class='a ne'>
@@ -545,10 +467,10 @@ Last updated on 27-Mar-2021 at 17:19:49
  <tr id='hartlepool' class='a ne'>
   <td class='eq nld' title="13/03: NLD: Hartlepool 120->124 +3.3%"></td>  <td class='eq nld' title="14/03: NLD: Hartlepool 118->121 +2.5%"></td>  <td class='eq nld' title="15/03: NLD: Hartlepool 117->121 +3.4%"></td>  <td class='dn25 nld' title="16/03: NLD: Hartlepool 133->97 -27.1%"></td>  <td class='dn25 nld' title="17/03: NLD: Hartlepool 131->93 -29.0%"></td>  <td class='dn10 nld' title="18/03: NLD: Hartlepool 115->98 -14.8%"></td>  <td class='dn25 nld' title="19/03: NLD: Hartlepool 132->79 -40.2%"></td>  <td class='dn25 nld' title="20/03: NLD: Hartlepool 124->84 -32.3%"></td>  <td class='dn25 nld' title="21/03: NLD: Hartlepool 121->88 -27.3%"></td>  <td class='dn25 nld' title="22/03: NLD: Hartlepool 121->89 -26.4%"></td>  <td class='up5 nld' title="23/03: NLD: Hartlepool 97->103 +6.2%"></td>  <td class='up10 nld' title="24/03: NLD: Hartlepool 93->109 +17.2%"></td>  <td class='up10 nld' title="25/03: NLD: Hartlepool 98->119 +21.4%"></td>  <td class='up50 nld' title="26/03: NLD: Hartlepool 79->139 +75.9%"></td>  <td class='dn5 nld' title="27/03: NLD: Hartlepool 84->77 -8.3%"></td>  <td class='data'>Hartlepool</td>  <td class='data'>NE</td>
  </tr>
- <tr id='stocktonontees' class='a ne'>
+ <tr id='stocktonontees' class='a ne co dur & n yor'>
   <td class='eq nld' title="13/03: NLD: Stockton-on-Tees 112->115 +2.7%"></td>  <td class='eq nld' title="14/03: NLD: Stockton-on-Tees 115->116 +0.9%"></td>  <td class='dn5 nld' title="15/03: NLD: Stockton-on-Tees 122->110 -9.8%"></td>  <td class='dn10 nld' title="16/03: NLD: Stockton-on-Tees 128->100 -21.9%"></td>  <td class='dn25 nld' title="17/03: NLD: Stockton-on-Tees 133->95 -28.6%"></td>  <td class='dn10 nld' title="18/03: NLD: Stockton-on-Tees 111->95 -14.4%"></td>  <td class='dn25 nld' title="19/03: NLD: Stockton-on-Tees 123->84 -31.7%"></td>  <td class='dn10 nld' title="20/03: NLD: Stockton-on-Tees 115->89 -22.6%"></td>  <td class='dn10 nld' title="21/03: NLD: Stockton-on-Tees 116->97 -16.4%"></td>  <td class='dn10 nld' title="22/03: NLD: Stockton-on-Tees 110->96 -12.7%"></td>  <td class='up5 nld' title="23/03: NLD: Stockton-on-Tees 100->106 +6.0%"></td>  <td class='up10 nld' title="24/03: NLD: Stockton-on-Tees 95->116 +22.1%"></td>  <td class='up25 nld' title="25/03: NLD: Stockton-on-Tees 95->120 +26.3%"></td>  <td class='up50 nld' title="26/03: NLD: Stockton-on-Tees 84->129 +53.6%"></td>  <td class='up5 nld' title="27/03: NLD: Stockton-on-Tees 89->94 +5.6%"></td>  <td class='data'>Stockton-on-Tees</td>  <td class='data'>NE</td>
  </tr>
- <tr class='a ne' >
+ <tr class='a ne co dur & n yor' >
  <td></td> <td></td> <td></td> <td></td> <td></td> <td></td> <td></td> <td></td> <td></td> <td></td> <td></td> <td></td> <td></td> <td></td> <td></td>  <td class='data'></td>  <td></td>
  </tr>
  <tr id='middlesbrough' class='a ne'>
@@ -584,10 +506,10 @@ Last updated on 27-Mar-2021 at 17:19:49
  <tr class='a ne' >
  <td></td> <td></td> <td></td> <td></td> <td></td> <td></td> <td></td> <td></td> <td></td> <td></td> <td></td> <td></td> <td></td> <td></td> <td></td>  <td class='data'></td>  <td></td>
  </tr>
- <tr id='northeast' class='a ne'>
+ <tr id='northeast' class='a ne ne'>
   <td class='eq' title="13/03: : North East 84->80 -4.8%"></td>  <td class='eq' title="14/03: : North East 80->80 +0.0%"></td>  <td class='eq' title="15/03: : North East 82->80 -2.4%"></td>  <td class='eq' title="16/03: : North East 81->78 -3.7%"></td>  <td class='dn5' title="17/03: : North East 79->75 -5.1%"></td>  <td class='eq' title="18/03: : North East 76->78 +2.6%"></td>  <td class='dn10' title="19/03: : North East 82->73 -11.0%"></td>  <td class='dn5' title="20/03: : North East 80->73 -8.8%"></td>  <td class='dn5' title="21/03: : North East 80->74 -7.5%"></td>  <td class='dn10' title="22/03: : North East 80->71 -11.2%"></td>  <td class='dn5' title="23/03: : North East 78->73 -6.4%"></td>  <td class='eq' title="24/03: : North East 75->77 +2.7%"></td>  <td class='eq' title="25/03: : North East 78->80 +2.6%"></td>  <td class='up10' title="26/03: : North East 73->85 +16.4%"></td>  <td class='dn25' title="27/03: : North East 73->53 -27.4%"></td>  <td class='data'>North East</td>  <td class='data'>NE</td>
  </tr>
- <tr class='a ne' >
+ <tr class='a ne ne' >
  <td></td> <td></td> <td></td> <td></td> <td></td> <td></td> <td></td> <td></td> <td></td> <td></td> <td></td> <td></td> <td></td> <td></td> <td></td>  <td class='data'></td>  <td></td>
  </tr>
  <tr id='cheshireeast' class='a nw'>
@@ -629,37 +551,37 @@ Last updated on 27-Mar-2021 at 17:19:49
  <tr class='a nw' >
  <td></td> <td></td> <td></td> <td></td> <td></td> <td></td> <td></td> <td></td> <td></td> <td></td> <td></td> <td></td> <td></td> <td></td> <td></td>  <td class='data'></td>  <td></td>
  </tr>
- <tr id='bolton' class='a nw'>
+ <tr id='bolton' class='a nw gm'>
   <td class='dn10 nld' title="13/03: NLD: Bolton 108->96 -11.1%"></td>  <td class='dn10 nld' title="14/03: NLD: Bolton 111->94 -15.3%"></td>  <td class='dn5 nld' title="15/03: NLD: Bolton 105->97 -7.6%"></td>  <td class='eq nld' title="16/03: NLD: Bolton 98->101 +3.1%"></td>  <td class='eq nld' title="17/03: NLD: Bolton 100->98 -2.0%"></td>  <td class='eq nld' title="18/03: NLD: Bolton 103->100 -2.9%"></td>  <td class='dn10 nld' title="19/03: NLD: Bolton 106->90 -15.1%"></td>  <td class='up5 nld' title="20/03: NLD: Bolton 96->101 +5.2%"></td>  <td class='up10 nld' title="21/03: NLD: Bolton 94->105 +11.7%"></td>  <td class='up10 nld' title="22/03: NLD: Bolton 97->114 +17.5%"></td>  <td class='up5 nld' title="23/03: NLD: Bolton 101->107 +5.9%"></td>  <td class='up10 nld' title="24/03: NLD: Bolton 98->110 +12.2%"></td>  <td class='eq nld' title="25/03: NLD: Bolton 100->105 +5.0%"></td>  <td class='up25 nld' title="26/03: NLD: Bolton 90->117 +30.0%"></td>  <td class='up10 nld' title="27/03: NLD: Bolton 101->112 +10.9%"></td>  <td class='data'>Bolton</td>  <td class='data'>NW</td>
  </tr>
- <tr id='bury' class='a nw'>
+ <tr id='bury' class='a nw gm'>
   <td class='dn10 nld' title="13/03: NLD: Bury 91->75 -17.6%"></td>  <td class='dn10 nld' title="14/03: NLD: Bury 92->71 -22.8%"></td>  <td class='dn10 nld' title="15/03: NLD: Bury 90->69 -23.3%"></td>  <td class='dn10 nld' title="16/03: NLD: Bury 87->72 -17.2%"></td>  <td class='eq nld' title="17/03: NLD: Bury 82->81 -1.2%"></td>  <td class='dn10 nld' title="18/03: NLD: Bury 87->77 -11.5%"></td>  <td class='dn5 nld' title="19/03: NLD: Bury 80->74 -7.5%"></td>  <td class='up10 nld' title="20/03: NLD: Bury 75->84 +12.0%"></td>  <td class='up25 nld' title="21/03: NLD: Bury 71->97 +36.6%"></td>  <td class='up25 nld' title="22/03: NLD: Bury 69->100 +44.9%"></td>  <td class='up25 nld' title="23/03: NLD: Bury 72->97 +34.7%"></td>  <td class='up5 nld' title="24/03: NLD: Bury 81->87 +7.4%"></td>  <td class='up10 nld' title="25/03: NLD: Bury 77->86 +11.7%"></td>  <td class='up10 nld' title="26/03: NLD: Bury 74->92 +24.3%"></td>  <td class='eq nld' title="27/03: NLD: Bury 84->83 -1.2%"></td>  <td class='data'>Bury</td>  <td class='data'>NW</td>
  </tr>
- <tr id='manchester' class='a nw'>
+ <tr id='manchester' class='a nw gm'>
   <td class='eq nld' title="13/03: NLD: Manchester 89->93 +4.5%"></td>  <td class='up10 nld' title="14/03: NLD: Manchester 81->93 +14.8%"></td>  <td class='up10 nld' title="15/03: NLD: Manchester 76->94 +23.7%"></td>  <td class='up5 nld' title="16/03: NLD: Manchester 83->88 +6.0%"></td>  <td class='up10 nld' title="17/03: NLD: Manchester 85->94 +10.6%"></td>  <td class='up5 nld' title="18/03: NLD: Manchester 87->93 +6.9%"></td>  <td class='dn5 nld' title="19/03: NLD: Manchester 90->83 -7.8%"></td>  <td class='dn10 nld' title="20/03: NLD: Manchester 93->81 -12.9%"></td>  <td class='dn5 nld' title="21/03: NLD: Manchester 93->86 -7.5%"></td>  <td class='eq nld' title="22/03: NLD: Manchester 94->91 -3.2%"></td>  <td class='up5 nld' title="23/03: NLD: Manchester 88->95 +8.0%"></td>  <td class='eq nld' title="24/03: NLD: Manchester 94->92 -2.1%"></td>  <td class='eq nld' title="25/03: NLD: Manchester 93->91 -2.2%"></td>  <td class='up10 nld' title="26/03: NLD: Manchester 83->101 +21.7%"></td>  <td class='up25 nld' title="27/03: NLD: Manchester 81->104 +28.4%"></td>  <td class='data'>Manchester</td>  <td class='data'>NW</td>
  </tr>
- <tr id='oldham' class='a nw'>
+ <tr id='oldham' class='a nw gm'>
   <td class='up10 nld' title="13/03: NLD: Oldham 88->100 +13.6%"></td>  <td class='up10 nld' title="14/03: NLD: Oldham 85->101 +18.8%"></td>  <td class='up10 nld' title="15/03: NLD: Oldham 86->96 +11.6%"></td>  <td class='up5 nld' title="16/03: NLD: Oldham 90->97 +7.8%"></td>  <td class='up10 nld' title="17/03: NLD: Oldham 88->103 +17.0%"></td>  <td class='eq nld' title="18/03: NLD: Oldham 97->97 +0.0%"></td>  <td class='dn5 nld' title="19/03: NLD: Oldham 101->91 -9.9%"></td>  <td class='eq nld' title="20/03: NLD: Oldham 100->96 -4.0%"></td>  <td class='eq nld' title="21/03: NLD: Oldham 101->102 +1.0%"></td>  <td class='up5 nld' title="22/03: NLD: Oldham 96->105 +9.4%"></td>  <td class='up10 nld' title="23/03: NLD: Oldham 97->108 +11.3%"></td>  <td class='eq nld' title="24/03: NLD: Oldham 103->102 -1.0%"></td>  <td class='up10 nld' title="25/03: NLD: Oldham 97->107 +10.3%"></td>  <td class='up25 nld' title="26/03: NLD: Oldham 91->119 +30.8%"></td>  <td class='up10 nld' title="27/03: NLD: Oldham 96->119 +24.0%"></td>  <td class='data'>Oldham</td>  <td class='data'>NW</td>
  </tr>
- <tr id='rochdale' class='a nw'>
+ <tr id='rochdale' class='a nw gm'>
   <td class='eq nld' title="13/03: NLD: Rochdale 120->126 +5.0%"></td>  <td class='eq nld' title="14/03: NLD: Rochdale 119->125 +5.0%"></td>  <td class='eq nld' title="15/03: NLD: Rochdale 119->124 +4.2%"></td>  <td class='eq nld' title="16/03: NLD: Rochdale 119->121 +1.7%"></td>  <td class='eq nld' title="17/03: NLD: Rochdale 116->117 +0.9%"></td>  <td class='dn10 nld' title="18/03: NLD: Rochdale 121->103 -14.9%"></td>  <td class='dn25 nld' title="19/03: NLD: Rochdale 124->92 -25.8%"></td>  <td class='dn25 nld' title="20/03: NLD: Rochdale 126->88 -30.2%"></td>  <td class='dn10 nld' title="21/03: NLD: Rochdale 125->104 -16.8%"></td>  <td class='dn10 nld' title="22/03: NLD: Rochdale 124->106 -14.5%"></td>  <td class='dn10 nld' title="23/03: NLD: Rochdale 121->105 -13.2%"></td>  <td class='dn5 nld' title="24/03: NLD: Rochdale 117->110 -6.0%"></td>  <td class='up5 nld' title="25/03: NLD: Rochdale 103->109 +5.8%"></td>  <td class='up10 nld' title="26/03: NLD: Rochdale 92->115 +25.0%"></td>  <td class='up25 nld' title="27/03: NLD: Rochdale 88->120 +36.4%"></td>  <td class='data'>Rochdale</td>  <td class='data'>NW</td>
  </tr>
- <tr id='salford' class='a nw'>
+ <tr id='salford' class='a nw gm'>
   <td class='up10 nld' title="13/03: NLD: Salford 98->114 +16.3%"></td>  <td class='up10 nld' title="14/03: NLD: Salford 100->113 +13.0%"></td>  <td class='up5 nld' title="15/03: NLD: Salford 105->112 +6.7%"></td>  <td class='dn5 nld' title="16/03: NLD: Salford 110->104 -5.5%"></td>  <td class='eq nld' title="17/03: NLD: Salford 112->111 -0.9%"></td>  <td class='eq nld' title="18/03: NLD: Salford 114->115 +0.9%"></td>  <td class='dn5 nld' title="19/03: NLD: Salford 116->107 -7.8%"></td>  <td class='eq nld' title="20/03: NLD: Salford 114->112 -1.8%"></td>  <td class='eq nld' title="21/03: NLD: Salford 113->115 +1.8%"></td>  <td class='eq nld' title="22/03: NLD: Salford 112->112 +0.0%"></td>  <td class='eq nld' title="23/03: NLD: Salford 104->108 +3.8%"></td>  <td class='dn10 nld' title="24/03: NLD: Salford 111->95 -14.4%"></td>  <td class='dn10 nld' title="25/03: NLD: Salford 115->88 -23.5%"></td>  <td class='dn10 nld' title="26/03: NLD: Salford 107->90 -15.9%"></td>  <td class='dn10 nld' title="27/03: NLD: Salford 112->86 -23.2%"></td>  <td class='data'>Salford</td>  <td class='data'>NW</td>
  </tr>
- <tr id='stockport' class='a nw'>
+ <tr id='stockport' class='a nw gm'>
   <td class='eq nld' title="13/03: NLD: Stockport 89->93 +4.5%"></td>  <td class='up5 nld' title="14/03: NLD: Stockport 87->93 +6.9%"></td>  <td class='up10 nld' title="15/03: NLD: Stockport 87->96 +10.3%"></td>  <td class='up5 nld' title="16/03: NLD: Stockport 87->94 +8.0%"></td>  <td class='eq nld' title="17/03: NLD: Stockport 89->93 +4.5%"></td>  <td class='dn10 nld' title="18/03: NLD: Stockport 97->85 -12.4%"></td>  <td class='dn10 nld' title="19/03: NLD: Stockport 98->74 -24.5%"></td>  <td class='dn10 nld' title="20/03: NLD: Stockport 93->77 -17.2%"></td>  <td class='dn10 nld' title="21/03: NLD: Stockport 93->81 -12.9%"></td>  <td class='dn10 nld' title="22/03: NLD: Stockport 96->80 -16.7%"></td>  <td class='dn10 nld' title="23/03: NLD: Stockport 94->77 -18.1%"></td>  <td class='dn10 nld' title="24/03: NLD: Stockport 93->76 -18.3%"></td>  <td class='dn5 nld' title="25/03: NLD: Stockport 85->79 -7.1%"></td>  <td class='up10 nld' title="26/03: NLD: Stockport 74->85 +14.9%"></td>  <td class='up5 nld' title="27/03: NLD: Stockport 77->81 +5.2%"></td>  <td class='data'>Stockport</td>  <td class='data'>NW</td>
  </tr>
- <tr id='tameside' class='a nw'>
+ <tr id='tameside' class='a nw gm'>
   <td class='up5 nld' title="13/03: NLD: Tameside 104->113 +8.7%"></td>  <td class='up5 nld' title="14/03: NLD: Tameside 106->115 +8.5%"></td>  <td class='up5 nld' title="15/03: NLD: Tameside 109->116 +6.4%"></td>  <td class='up5 nld' title="16/03: NLD: Tameside 109->118 +8.3%"></td>  <td class='up10 nld' title="17/03: NLD: Tameside 110->122 +10.9%"></td>  <td class='up5 nld' title="18/03: NLD: Tameside 113->123 +8.8%"></td>  <td class='dn10 nld' title="19/03: NLD: Tameside 121->104 -14.0%"></td>  <td class='eq nld' title="20/03: NLD: Tameside 113->110 -2.7%"></td>  <td class='eq nld' title="21/03: NLD: Tameside 115->117 +1.7%"></td>  <td class='up5 nld' title="22/03: NLD: Tameside 116->122 +5.2%"></td>  <td class='up5 nld' title="23/03: NLD: Tameside 118->124 +5.1%"></td>  <td class='eq nld' title="24/03: NLD: Tameside 122->116 -4.9%"></td>  <td class='dn10 nld' title="25/03: NLD: Tameside 123->109 -11.4%"></td>  <td class='up10 nld' title="26/03: NLD: Tameside 104->125 +20.2%"></td>  <td class='up10 nld' title="27/03: NLD: Tameside 110->124 +12.7%"></td>  <td class='data'>Tameside</td>  <td class='data'>NW</td>
  </tr>
- <tr id='trafford' class='a nw'>
+ <tr id='trafford' class='a nw gm'>
   <td class='up10 nld' title="13/03: NLD: Trafford 61->69 +13.1%"></td>  <td class='eq nld' title="14/03: NLD: Trafford 61->63 +3.3%"></td>  <td class='eq nld' title="15/03: NLD: Trafford 59->61 +3.4%"></td>  <td class='dn10 nld' title="16/03: NLD: Trafford 64->48 -25.0%"></td>  <td class='dn25 nld' title="17/03: NLD: Trafford 64->46 -28.1%"></td>  <td class='dn25 nld' title="18/03: NLD: Trafford 69->42 -39.1%"></td>  <td class='dn50 nld' title="19/03: NLD: Trafford 73->33 -54.8%"></td>  <td class='dn25 nld' title="20/03: NLD: Trafford 69->37 -46.4%"></td>  <td class='dn25 nld' title="21/03: NLD: Trafford 63->43 -31.7%"></td>  <td class='dn25 nld' title="22/03: NLD: Trafford 61->39 -36.1%"></td>  <td class='dn5 nld' title="23/03: NLD: Trafford 48->45 -6.2%"></td>  <td class='eq nld' title="24/03: NLD: Trafford 46->47 +2.2%"></td>  <td class='up10 nld' title="25/03: NLD: Trafford 42->48 +14.3%"></td>  <td class='up50 nld' title="26/03: NLD: Trafford 33->59 +78.8%"></td>  <td class='up50 nld' title="27/03: NLD: Trafford 37->58 +56.8%"></td>  <td class='data'>Trafford</td>  <td class='data'>NW</td>
  </tr>
- <tr id='wigan' class='a nw'>
+ <tr id='wigan' class='a nw gm'>
   <td class='eq nld' title="13/03: NLD: Wigan 96->100 +4.2%"></td>  <td class='dn5 nld' title="14/03: NLD: Wigan 101->94 -6.9%"></td>  <td class='eq nld' title="15/03: NLD: Wigan 99->99 +0.0%"></td>  <td class='up5 nld' title="16/03: NLD: Wigan 97->105 +8.2%"></td>  <td class='up5 nld' title="17/03: NLD: Wigan 96->105 +9.4%"></td>  <td class='eq nld' title="18/03: NLD: Wigan 98->101 +3.1%"></td>  <td class='dn10 nld' title="19/03: NLD: Wigan 102->90 -11.8%"></td>  <td class='eq nld' title="20/03: NLD: Wigan 100->97 -3.0%"></td>  <td class='up5 nld' title="21/03: NLD: Wigan 94->102 +8.5%"></td>  <td class='eq nld' title="22/03: NLD: Wigan 99->103 +4.0%"></td>  <td class='eq nld' title="23/03: NLD: Wigan 105->103 -1.9%"></td>  <td class='eq nld' title="24/03: NLD: Wigan 105->101 -3.8%"></td>  <td class='eq nld' title="25/03: NLD: Wigan 101->100 -1.0%"></td>  <td class='up10 nld' title="26/03: NLD: Wigan 90->105 +16.7%"></td>  <td class='eq nld' title="27/03: NLD: Wigan 97->101 +4.1%"></td>  <td class='data'>Wigan</td>  <td class='data'>NW</td>
  </tr>
- <tr class='a nw' >
+ <tr class='a nw gm' >
  <td></td> <td></td> <td></td> <td></td> <td></td> <td></td> <td></td> <td></td> <td></td> <td></td> <td></td> <td></td> <td></td> <td></td> <td></td>  <td class='data'></td>  <td></td>
  </tr>
  <tr id='blackburnwithdarwen' class='a nw'>
@@ -728,10 +650,10 @@ Last updated on 27-Mar-2021 at 17:19:49
  <tr class='a nw' >
  <td></td> <td></td> <td></td> <td></td> <td></td> <td></td> <td></td> <td></td> <td></td> <td></td> <td></td> <td></td> <td></td> <td></td> <td></td>  <td class='data'></td>  <td></td>
  </tr>
- <tr id='northwest' class='a nw'>
+ <tr id='northwest' class='a nw nw'>
   <td class='eq' title="13/03: : North West 81->77 -4.9%"></td>  <td class='dn5' title="14/03: : North West 80->74 -7.5%"></td>  <td class='eq' title="15/03: : North West 78->75 -3.8%"></td>  <td class='dn5' title="16/03: : North West 78->73 -6.4%"></td>  <td class='eq' title="17/03: : North West 76->73 -3.9%"></td>  <td class='dn10' title="18/03: : North West 78->70 -10.3%"></td>  <td class='dn10' title="19/03: : North West 79->63 -20.3%"></td>  <td class='dn10' title="20/03: : North West 77->65 -15.6%"></td>  <td class='dn5' title="21/03: : North West 74->69 -6.8%"></td>  <td class='dn5' title="22/03: : North West 75->71 -5.3%"></td>  <td class='eq' title="23/03: : North West 73->71 -2.7%"></td>  <td class='dn5' title="24/03: : North West 73->69 -5.5%"></td>  <td class='eq' title="25/03: : North West 70->68 -2.9%"></td>  <td class='up10' title="26/03: : North West 63->74 +17.5%"></td>  <td class='up10' title="27/03: : North West 65->72 +10.8%"></td>  <td class='data'>North West</td>  <td class='data'>NW</td>
  </tr>
- <tr class='a nw' >
+ <tr class='a nw nw' >
  <td></td> <td></td> <td></td> <td></td> <td></td> <td></td> <td></td> <td></td> <td></td> <td></td> <td></td> <td></td> <td></td> <td></td> <td></td>  <td class='data'></td>  <td></td>
  </tr>
  <tr id='bracknellforest' class='a se'>
@@ -986,10 +908,10 @@ Last updated on 27-Mar-2021 at 17:19:49
  <tr class='a se' >
  <td></td> <td></td> <td></td> <td></td> <td></td> <td></td> <td></td> <td></td> <td></td> <td></td> <td></td> <td></td> <td></td> <td></td> <td></td>  <td class='data'></td>  <td></td>
  </tr>
- <tr id='southeast' class='a se'>
+ <tr id='southeast' class='a se se'>
   <td class='dn5' title="13/03: : South East 42->39 -7.1%"></td>  <td class='dn10' title="14/03: : South East 42->37 -11.9%"></td>  <td class='dn5' title="15/03: : South East 41->38 -7.3%"></td>  <td class='eq' title="16/03: : South East 38->37 -2.6%"></td>  <td class='eq' title="17/03: : South East 37->38 +2.7%"></td>  <td class='eq' title="18/03: : South East 38->37 -2.6%"></td>  <td class='dn10' title="19/03: : South East 39->34 -12.8%"></td>  <td class='dn10' title="20/03: : South East 39->33 -15.4%"></td>  <td class='dn5' title="21/03: : South East 37->35 -5.4%"></td>  <td class='dn5' title="22/03: : South East 38->35 -7.9%"></td>  <td class='dn5' title="23/03: : South East 37->35 -5.4%"></td>  <td class='dn10' title="24/03: : South East 38->34 -10.5%"></td>  <td class='dn5' title="25/03: : South East 37->34 -8.1%"></td>  <td class='up5' title="26/03: : South East 34->36 +5.9%"></td>  <td class='up5' title="27/03: : South East 33->35 +6.1%"></td>  <td class='data'>South East</td>  <td class='data'>SE</td>
  </tr>
- <tr class='a se' >
+ <tr class='a se se' >
  <td></td> <td></td> <td></td> <td></td> <td></td> <td></td> <td></td> <td></td> <td></td> <td></td> <td></td> <td></td> <td></td> <td></td> <td></td>  <td class='data'></td>  <td></td>
  </tr>
  <tr id='bristol' class='a sw'>
@@ -1109,10 +1031,10 @@ Last updated on 27-Mar-2021 at 17:19:49
  <tr class='a sw' >
  <td></td> <td></td> <td></td> <td></td> <td></td> <td></td> <td></td> <td></td> <td></td> <td></td> <td></td> <td></td> <td></td> <td></td> <td></td>  <td class='data'></td>  <td></td>
  </tr>
- <tr id='southwest' class='a sw'>
+ <tr id='southwest' class='a sw sw'>
   <td class='eq' title="13/03: : South West 34->34 +0.0%"></td>  <td class='eq' title="14/03: : South West 34->33 -2.9%"></td>  <td class='eq' title="15/03: : South West 33->32 -3.0%"></td>  <td class='dn10' title="16/03: : South West 34->30 -11.8%"></td>  <td class='dn5' title="17/03: : South West 33->31 -6.1%"></td>  <td class='dn5' title="18/03: : South West 33->30 -9.1%"></td>  <td class='dn10' title="19/03: : South West 33->28 -15.2%"></td>  <td class='dn10' title="20/03: : South West 34->28 -17.6%"></td>  <td class='dn10' title="21/03: : South West 33->27 -18.2%"></td>  <td class='dn5' title="22/03: : South West 32->29 -9.4%"></td>  <td class='eq' title="23/03: : South West 30->29 -3.3%"></td>  <td class='dn5' title="24/03: : South West 31->28 -9.7%"></td>  <td class='eq' title="25/03: : South West 30->29 -3.3%"></td>  <td class='up5' title="26/03: : South West 28->30 +7.1%"></td>  <td class='eq' title="27/03: : South West 28->29 +3.6%"></td>  <td class='data'>South West</td>  <td class='data'>SW</td>
  </tr>
- <tr class='a sw' >
+ <tr class='a sw sw' >
  <td></td> <td></td> <td></td> <td></td> <td></td> <td></td> <td></td> <td></td> <td></td> <td></td> <td></td> <td></td> <td></td> <td></td> <td></td>  <td class='data'></td>  <td></td>
  </tr>
  <tr id='herefordshire' class='a wm'>
@@ -1187,28 +1109,28 @@ Last updated on 27-Mar-2021 at 17:19:49
  <tr class='a wm' >
  <td></td> <td></td> <td></td> <td></td> <td></td> <td></td> <td></td> <td></td> <td></td> <td></td> <td></td> <td></td> <td></td> <td></td> <td></td>  <td class='data'></td>  <td></td>
  </tr>
- <tr id='birmingham' class='a wm'>
+ <tr id='birmingham' class='a wm wm'>
   <td class='dn10 nld' title="13/03: NLD: Birmingham 99->80 -19.2%"></td>  <td class='dn10 nld' title="14/03: NLD: Birmingham 95->78 -17.9%"></td>  <td class='dn10 nld' title="15/03: NLD: Birmingham 93->76 -18.3%"></td>  <td class='dn10 nld' title="16/03: NLD: Birmingham 87->78 -10.3%"></td>  <td class='dn10 nld' title="17/03: NLD: Birmingham 86->77 -10.5%"></td>  <td class='dn10 nld' title="18/03: NLD: Birmingham 84->75 -10.7%"></td>  <td class='dn10 nld' title="19/03: NLD: Birmingham 85->68 -20.0%"></td>  <td class='dn10 nld' title="20/03: NLD: Birmingham 80->69 -13.8%"></td>  <td class='dn5 nld' title="21/03: NLD: Birmingham 78->72 -7.7%"></td>  <td class='dn5 nld' title="22/03: NLD: Birmingham 76->72 -5.3%"></td>  <td class='dn5 nld' title="23/03: NLD: Birmingham 78->74 -5.1%"></td>  <td class='dn5 nld' title="24/03: NLD: Birmingham 77->73 -5.2%"></td>  <td class='eq nld' title="25/03: NLD: Birmingham 75->72 -4.0%"></td>  <td class='up10 nld' title="26/03: NLD: Birmingham 68->79 +16.2%"></td>  <td class='up10 nld' title="27/03: NLD: Birmingham 69->76 +10.1%"></td>  <td class='data'>Birmingham</td>  <td class='data'>WM</td>
  </tr>
- <tr id='coventry' class='a wm'>
+ <tr id='coventry' class='a wm wm'>
   <td class='dn10 nld' title="13/03: NLD: Coventry 77->61 -20.8%"></td>  <td class='dn10 nld' title="14/03: NLD: Coventry 75->58 -22.7%"></td>  <td class='dn10 nld' title="15/03: NLD: Coventry 70->56 -20.0%"></td>  <td class='dn10 nld' title="16/03: NLD: Coventry 66->54 -18.2%"></td>  <td class='dn10 nld' title="17/03: NLD: Coventry 66->54 -18.2%"></td>  <td class='dn10 nld' title="18/03: NLD: Coventry 64->52 -18.8%"></td>  <td class='dn25 nld' title="19/03: NLD: Coventry 65->48 -26.2%"></td>  <td class='dn10 nld' title="20/03: NLD: Coventry 61->50 -18.0%"></td>  <td class='dn5 nld' title="21/03: NLD: Coventry 58->54 -6.9%"></td>  <td class='eq nld' title="22/03: NLD: Coventry 56->57 +1.8%"></td>  <td class='up10 nld' title="23/03: NLD: Coventry 54->60 +11.1%"></td>  <td class='up5 nld' title="24/03: NLD: Coventry 54->58 +7.4%"></td>  <td class='up10 nld' title="25/03: NLD: Coventry 52->60 +15.4%"></td>  <td class='up25 nld' title="26/03: NLD: Coventry 48->61 +27.1%"></td>  <td class='up5 nld' title="27/03: NLD: Coventry 50->55 +10.0%"></td>  <td class='data'>Coventry</td>  <td class='data'>WM</td>
  </tr>
- <tr id='dudley' class='a wm'>
+ <tr id='dudley' class='a wm wm'>
   <td class='dn25 nld' title="13/03: NLD: Dudley 87->53 -39.1%"></td>  <td class='dn25 nld' title="14/03: NLD: Dudley 79->49 -38.0%"></td>  <td class='dn25 nld' title="15/03: NLD: Dudley 74->52 -29.7%"></td>  <td class='dn10 nld' title="16/03: NLD: Dudley 71->55 -22.5%"></td>  <td class='dn5 nld' title="17/03: NLD: Dudley 69->63 -8.7%"></td>  <td class='up10 nld' title="18/03: NLD: Dudley 60->70 +16.7%"></td>  <td class='up25 nld' title="19/03: NLD: Dudley 52->74 +42.3%"></td>  <td class='up25 nld' title="20/03: NLD: Dudley 53->78 +47.2%"></td>  <td class='up50 nld' title="21/03: NLD: Dudley 49->83 +69.4%"></td>  <td class='up50 nld' title="22/03: NLD: Dudley 52->85 +63.5%"></td>  <td class='up50 nld' title="23/03: NLD: Dudley 55->84 +52.7%"></td>  <td class='up25 nld' title="24/03: NLD: Dudley 63->82 +30.2%"></td>  <td class='up10 nld' title="25/03: NLD: Dudley 70->81 +15.7%"></td>  <td class='up5 nld' title="26/03: NLD: Dudley 74->81 +9.5%"></td>  <td class='eq nld' title="27/03: NLD: Dudley 78->80 +2.6%"></td>  <td class='data'>Dudley</td>  <td class='data'>WM</td>
  </tr>
- <tr id='sandwell' class='a wm'>
+ <tr id='sandwell' class='a wm wm'>
   <td class='dn10 nld' title="13/03: NLD: Sandwell 109->93 -14.7%"></td>  <td class='dn10 nld' title="14/03: NLD: Sandwell 102->91 -10.8%"></td>  <td class='eq nld' title="15/03: NLD: Sandwell 97->93 -4.1%"></td>  <td class='dn10 nld' title="16/03: NLD: Sandwell 98->88 -10.2%"></td>  <td class='eq nld' title="17/03: NLD: Sandwell 90->94 +4.4%"></td>  <td class='eq nld' title="18/03: NLD: Sandwell 89->89 +0.0%"></td>  <td class='eq nld' title="19/03: NLD: Sandwell 87->87 +0.0%"></td>  <td class='dn10 nld' title="20/03: NLD: Sandwell 93->83 -10.8%"></td>  <td class='eq nld' title="21/03: NLD: Sandwell 91->87 -4.4%"></td>  <td class='dn5 nld' title="22/03: NLD: Sandwell 93->87 -6.5%"></td>  <td class='eq nld' title="23/03: NLD: Sandwell 88->86 -2.3%"></td>  <td class='dn10 nld' title="24/03: NLD: Sandwell 94->79 -16.0%"></td>  <td class='eq nld' title="25/03: NLD: Sandwell 89->87 -2.2%"></td>  <td class='up10 nld' title="26/03: NLD: Sandwell 87->97 +11.5%"></td>  <td class='up10 nld' title="27/03: NLD: Sandwell 83->98 +18.1%"></td>  <td class='data'>Sandwell</td>  <td class='data'>WM</td>
  </tr>
- <tr id='solihull' class='a wm'>
+ <tr id='solihull' class='a wm wm'>
   <td class='up25 nld' title="13/03: NLD: Solihull 54->79 +46.3%"></td>  <td class='up50 nld' title="14/03: NLD: Solihull 51->83 +62.7%"></td>  <td class='up50 nld' title="15/03: NLD: Solihull 54->85 +57.4%"></td>  <td class='up25 nld' title="16/03: NLD: Solihull 58->87 +50.0%"></td>  <td class='up25 nld' title="17/03: NLD: Solihull 63->88 +39.7%"></td>  <td class='up25 nld' title="18/03: NLD: Solihull 66->89 +34.8%"></td>  <td class='up25 nld' title="19/03: NLD: Solihull 67->86 +28.4%"></td>  <td class='up10 nld' title="20/03: NLD: Solihull 79->87 +10.1%"></td>  <td class='eq nld' title="21/03: NLD: Solihull 83->83 +0.0%"></td>  <td class='dn5 nld' title="22/03: NLD: Solihull 85->79 -7.1%"></td>  <td class='dn10 nld' title="23/03: NLD: Solihull 87->73 -16.1%"></td>  <td class='dn10 nld' title="24/03: NLD: Solihull 88->69 -21.6%"></td>  <td class='dn25 nld' title="25/03: NLD: Solihull 89->63 -29.2%"></td>  <td class='dn10 nld' title="26/03: NLD: Solihull 86->68 -20.9%"></td>  <td class='dn25 nld' title="27/03: NLD: Solihull 87->59 -32.2%"></td>  <td class='data'>Solihull</td>  <td class='data'>WM</td>
  </tr>
- <tr id='walsall' class='a wm'>
+ <tr id='walsall' class='a wm wm'>
   <td class='dn10 nld' title="13/03: NLD: Walsall 91->77 -15.4%"></td>  <td class='dn10 nld' title="14/03: NLD: Walsall 93->77 -17.2%"></td>  <td class='dn10 nld' title="15/03: NLD: Walsall 90->80 -11.1%"></td>  <td class='eq nld' title="16/03: NLD: Walsall 77->76 -1.3%"></td>  <td class='eq nld' title="17/03: NLD: Walsall 78->80 +2.6%"></td>  <td class='eq nld' title="18/03: NLD: Walsall 77->76 -1.3%"></td>  <td class='eq nld' title="19/03: NLD: Walsall 77->76 -1.3%"></td>  <td class='dn5 nld' title="20/03: NLD: Walsall 77->70 -9.1%"></td>  <td class='dn10 nld' title="21/03: NLD: Walsall 77->68 -11.7%"></td>  <td class='dn10 nld' title="22/03: NLD: Walsall 80->64 -20.0%"></td>  <td class='dn5 nld' title="23/03: NLD: Walsall 76->70 -7.9%"></td>  <td class='dn10 nld' title="24/03: NLD: Walsall 80->69 -13.8%"></td>  <td class='dn5 nld' title="25/03: NLD: Walsall 76->69 -9.2%"></td>  <td class='dn5 nld' title="26/03: NLD: Walsall 76->69 -9.2%"></td>  <td class='eq nld' title="27/03: NLD: Walsall 70->70 +0.0%"></td>  <td class='data'>Walsall</td>  <td class='data'>WM</td>
  </tr>
- <tr id='wolverhampton' class='a wm'>
+ <tr id='wolverhampton' class='a wm wm'>
   <td class='dn10 nld' title="13/03: NLD: Wolverhampton 69->60 -13.0%"></td>  <td class='dn5 nld' title="14/03: NLD: Wolverhampton 70->63 -10.0%"></td>  <td class='eq nld' title="15/03: NLD: Wolverhampton 66->63 -4.5%"></td>  <td class='eq nld' title="16/03: NLD: Wolverhampton 64->64 +0.0%"></td>  <td class='up10 nld' title="17/03: NLD: Wolverhampton 61->69 +13.1%"></td>  <td class='eq nld' title="18/03: NLD: Wolverhampton 63->64 +1.6%"></td>  <td class='up10 nld' title="19/03: NLD: Wolverhampton 60->67 +11.7%"></td>  <td class='up5 nld' title="20/03: NLD: Wolverhampton 60->65 +8.3%"></td>  <td class='eq nld' title="21/03: NLD: Wolverhampton 63->61 -3.2%"></td>  <td class='eq nld' title="22/03: NLD: Wolverhampton 63->61 -3.2%"></td>  <td class='eq nld' title="23/03: NLD: Wolverhampton 64->64 +0.0%"></td>  <td class='dn5 nld' title="24/03: NLD: Wolverhampton 69->63 -8.7%"></td>  <td class='eq nld' title="25/03: NLD: Wolverhampton 64->64 +0.0%"></td>  <td class='eq nld' title="26/03: NLD: Wolverhampton 67->65 -3.0%"></td>  <td class='eq nld' title="27/03: NLD: Wolverhampton 65->67 +3.1%"></td>  <td class='data'>Wolverhampton</td>  <td class='data'>WM</td>
  </tr>
- <tr class='a wm' >
+ <tr class='a wm wm' >
  <td></td> <td></td> <td></td> <td></td> <td></td> <td></td> <td></td> <td></td> <td></td> <td></td> <td></td> <td></td> <td></td> <td></td> <td></td>  <td class='data'></td>  <td></td>
  </tr>
  <tr id='bromsgrove' class='a wm'>
@@ -1235,19 +1157,19 @@ Last updated on 27-Mar-2021 at 17:19:49
  <tr class='a wm' >
  <td></td> <td></td> <td></td> <td></td> <td></td> <td></td> <td></td> <td></td> <td></td> <td></td> <td></td> <td></td> <td></td> <td></td> <td></td>  <td class='data'></td>  <td></td>
  </tr>
- <tr id='westmidlands' class='a wm'>
+ <tr id='westmidlands' class='a wm wm'>
   <td class='dn10' title="13/03: : West Midlands 81->68 -16.0%"></td>  <td class='dn10' title="14/03: : West Midlands 78->67 -14.1%"></td>  <td class='dn5' title="15/03: : West Midlands 75->68 -9.3%"></td>  <td class='dn5' title="16/03: : West Midlands 73->68 -6.8%"></td>  <td class='eq' title="17/03: : West Midlands 71->69 -2.8%"></td>  <td class='eq' title="18/03: : West Midlands 69->68 -1.4%"></td>  <td class='dn5' title="19/03: : West Midlands 69->64 -7.2%"></td>  <td class='dn5' title="20/03: : West Midlands 68->64 -5.9%"></td>  <td class='eq' title="21/03: : West Midlands 67->65 -3.0%"></td>  <td class='eq' title="22/03: : West Midlands 68->66 -2.9%"></td>  <td class='eq' title="23/03: : West Midlands 68->66 -2.9%"></td>  <td class='dn5' title="24/03: : West Midlands 69->65 -5.8%"></td>  <td class='dn5' title="25/03: : West Midlands 68->63 -7.4%"></td>  <td class='eq' title="26/03: : West Midlands 64->67 +4.7%"></td>  <td class='eq' title="27/03: : West Midlands 64->64 +0.0%"></td>  <td class='data'>West Midlands</td>  <td class='data'>WM</td>
  </tr>
- <tr class='a wm' >
+ <tr class='a wm wm' >
  <td></td> <td></td> <td></td> <td></td> <td></td> <td></td> <td></td> <td></td> <td></td> <td></td> <td></td> <td></td> <td></td> <td></td> <td></td>  <td class='data'></td>  <td></td>
  </tr>
- <tr id='eastridingofyorkshire' class='a yh'>
+ <tr id='eastridingofyorkshire' class='a yh east riding'>
   <td class='eq nld' title="13/03: NLD: East Riding of Yorkshire 75->72 -4.0%"></td>  <td class='eq nld' title="14/03: NLD: East Riding of Yorkshire 70->72 +2.9%"></td>  <td class='up5 nld' title="15/03: NLD: East Riding of Yorkshire 70->75 +7.1%"></td>  <td class='up5 nld' title="16/03: NLD: East Riding of Yorkshire 70->77 +10.0%"></td>  <td class='up5 nld' title="17/03: NLD: East Riding of Yorkshire 71->78 +9.9%"></td>  <td class='up10 nld' title="18/03: NLD: East Riding of Yorkshire 67->83 +23.9%"></td>  <td class='eq nld' title="19/03: NLD: East Riding of Yorkshire 73->76 +4.1%"></td>  <td class='up10 nld' title="20/03: NLD: East Riding of Yorkshire 72->81 +12.5%"></td>  <td class='up10 nld' title="21/03: NLD: East Riding of Yorkshire 72->81 +12.5%"></td>  <td class='eq nld' title="22/03: NLD: East Riding of Yorkshire 75->75 +0.0%"></td>  <td class='dn5 nld' title="23/03: NLD: East Riding of Yorkshire 77->72 -6.5%"></td>  <td class='dn10 nld' title="24/03: NLD: East Riding of Yorkshire 78->70 -10.3%"></td>  <td class='dn10 nld' title="25/03: NLD: East Riding of Yorkshire 83->70 -15.7%"></td>  <td class='dn5 nld' title="26/03: NLD: East Riding of Yorkshire 76->72 -5.3%"></td>  <td class='dn10 nld' title="27/03: NLD: East Riding of Yorkshire 81->61 -24.7%"></td>  <td class='data'>East Riding</td>  <td class='data'>YH</td>
  </tr>
- <tr id='kingstonuponhull' class='a yh'>
+ <tr id='kingstonuponhull' class='a yh east riding'>
   <td class='up5 nld' title="13/03: NLD: Kingston upon Hull 153->164 +7.2%"></td>  <td class='up10 nld' title="14/03: NLD: Kingston upon Hull 146->182 +24.7%"></td>  <td class='up10 nld' title="15/03: NLD: Kingston upon Hull 147->180 +22.4%"></td>  <td class='up5 nld' title="16/03: NLD: Kingston upon Hull 158->169 +7.0%"></td>  <td class='eq nld' title="17/03: NLD: Kingston upon Hull 164->165 +0.6%"></td>  <td class='up5 nld' title="18/03: NLD: Kingston upon Hull 162->175 +8.0%"></td>  <td class='up10 nld' title="19/03: NLD: Kingston upon Hull 158->174 +10.1%"></td>  <td class='eq nld' title="20/03: NLD: Kingston upon Hull 164->165 +0.6%"></td>  <td class='dn10 nld' title="21/03: NLD: Kingston upon Hull 182->153 -15.9%"></td>  <td class='dn10 nld' title="22/03: NLD: Kingston upon Hull 180->151 -16.1%"></td>  <td class='dn5 nld' title="23/03: NLD: Kingston upon Hull 169->160 -5.3%"></td>  <td class='dn5 nld' title="24/03: NLD: Kingston upon Hull 165->153 -7.3%"></td>  <td class='dn10 nld' title="25/03: NLD: Kingston upon Hull 175->148 -15.4%"></td>  <td class='dn10 nld' title="26/03: NLD: Kingston upon Hull 174->142 -18.4%"></td>  <td class='dn10 nld' title="27/03: NLD: Kingston upon Hull 165->137 -17.0%"></td>  <td class='data'>Hull</td>  <td class='data'>YH</td>
  </tr>
- <tr class='a yh' >
+ <tr class='a yh east riding' >
  <td></td> <td></td> <td></td> <td></td> <td></td> <td></td> <td></td> <td></td> <td></td> <td></td> <td></td> <td></td> <td></td> <td></td> <td></td>  <td class='data'></td>  <td></td>
  </tr>
  <tr id='northeastlincolnshire' class='a yh'>
@@ -1322,25 +1244,25 @@ Last updated on 27-Mar-2021 at 17:19:49
  <tr class='a yh' >
  <td></td> <td></td> <td></td> <td></td> <td></td> <td></td> <td></td> <td></td> <td></td> <td></td> <td></td> <td></td> <td></td> <td></td> <td></td>  <td class='data'></td>  <td></td>
  </tr>
- <tr id='yorkshireandthehumber' class='a yh'>
+ <tr id='yorkshireandthehumber' class='a yh yh'>
   <td class='eq' title="13/03: : Yorkshire and The Humber 104->107 +2.9%"></td>  <td class='eq' title="14/03: : Yorkshire and The Humber 103->108 +4.9%"></td>  <td class='up5' title="15/03: : Yorkshire and The Humber 102->110 +7.8%"></td>  <td class='up10' title="16/03: : Yorkshire and The Humber 101->112 +10.9%"></td>  <td class='up5' title="17/03: : Yorkshire and The Humber 103->109 +5.8%"></td>  <td class='up5' title="18/03: : Yorkshire and The Humber 103->111 +7.8%"></td>  <td class='eq' title="19/03: : Yorkshire and The Humber 105->109 +3.8%"></td>  <td class='eq' title="20/03: : Yorkshire and The Humber 107->108 +0.9%"></td>  <td class='eq' title="21/03: : Yorkshire and The Humber 108->109 +0.9%"></td>  <td class='eq' title="22/03: : Yorkshire and The Humber 110->110 +0.0%"></td>  <td class='eq' title="23/03: : Yorkshire and The Humber 112->111 -0.9%"></td>  <td class='eq' title="24/03: : Yorkshire and The Humber 109->113 +3.7%"></td>  <td class='eq' title="25/03: : Yorkshire and The Humber 111->114 +2.7%"></td>  <td class='up5' title="26/03: : Yorkshire and The Humber 109->118 +8.3%"></td>  <td class='up5' title="27/03: : Yorkshire and The Humber 108->115 +6.5%"></td>  <td class='data'>Yorkshire+H</td>  <td class='data'>YH</td>
  </tr>
- <tr class='a yh' >
+ <tr class='a yh yh' >
  <td></td> <td></td> <td></td> <td></td> <td></td> <td></td> <td></td> <td></td> <td></td> <td></td> <td></td> <td></td> <td></td> <td></td> <td></td>  <td class='data'></td>  <td></td>
  </tr>
- <tr id='england' class='a england'>
+ <tr id='england' class='a england england'>
   <td class='dn5' title="13/03: : England 64->60 -6.2%"></td>  <td class='dn5' title="14/03: : England 63->59 -6.3%"></td>  <td class='eq' title="15/03: : England 62->59 -4.8%"></td>  <td class='eq' title="16/03: : England 61->58 -4.9%"></td>  <td class='eq' title="17/03: : England 60->58 -3.3%"></td>  <td class='eq' title="18/03: : England 60->57 -5.0%"></td>  <td class='dn10' title="19/03: : England 61->54 -11.5%"></td>  <td class='dn5' title="20/03: : England 60->55 -8.3%"></td>  <td class='dn5' title="21/03: : England 59->56 -5.1%"></td>  <td class='eq' title="22/03: : England 59->57 -3.4%"></td>  <td class='eq' title="23/03: : England 58->57 -1.7%"></td>  <td class='eq' title="24/03: : England 58->57 -1.7%"></td>  <td class='eq' title="25/03: : England 57->57 +0.0%"></td>  <td class='up5' title="26/03: : England 54->59 +9.3%"></td>  <td class='eq' title="27/03: : England 55->56 +1.8%"></td>  <td class='data'>England</td>  <td class='data'>England</td>
  </tr>
- <tr class='a england' >
+ <tr class='a england england' >
  <td></td> <td></td> <td></td> <td></td> <td></td> <td></td> <td></td> <td></td> <td></td> <td></td> <td></td> <td></td> <td></td> <td></td> <td></td>  <td class='data'></td>  <td></td>
  </tr>
- <tr class='a england' >
+ <tr class='a england england' >
  <td></td> <td></td> <td></td> <td></td> <td></td> <td></td> <td></td> <td></td> <td></td> <td></td> <td></td> <td></td> <td></td> <td></td> <td></td>  <td class='data'></td>  <td></td>
  </tr>
- <tr class='a england' >
+ <tr class='a england england' >
  <td></td> <td></td> <td></td> <td></td> <td></td> <td></td> <td></td> <td></td> <td></td> <td></td> <td></td> <td></td> <td></td> <td></td> <td></td>  <td class='data'></td>  <td></td>
  </tr>
- <tr class='a england' >
+ <tr class='a england england' >
  <td></td> <td></td> <td></td> <td></td> <td></td> <td></td> <td></td> <td></td> <td></td> <td></td> <td></td> <td></td> <td></td> <td></td> <td></td>  <td class='data'></td>  <td></td>
  </tr>
  </table>
