@@ -68,6 +68,7 @@
 		//console.log('aldisp checkbox changed ' + $(this).prop('id') + " checked");
 		if ($(this).prop('id') == 'all') {
 		    $('td.nld').css(  "border-bottom" ,  "3px solid purple"  );
+		    $('td.nldp').css(  "border-bottom" ,  "3px solid red"  );
 		    $('td.sah').css(  "border-bottom" ,  "3px solid blue"  );
 		    $('td.vh').css(  "border-bottom" ,  "3px solid dodgerblue"  );
 		    $('td.h').css(  "border-bottom" ,  "3px solid cyan"  );
@@ -76,6 +77,8 @@
 		    $('.aldisp').prop('checked',true);
 		} else if ($(this).prop('id') == 'nld') {
 		    $('td.nld').css(  "border-bottom" ,  "3px solid purple"  );
+		} else if ($(this).prop('id') == 'nldp') {
+		    $('td.nld').css(  "border-bottom" ,  "3px solid red"  );
 		} else if ($(this).prop('id') == 'sah') {
 		    $('td.sah').css(  "border-bottom" ,  "3px solid blue"  );
 		} else if ($(this).prop('id') == 'vh') {
@@ -90,6 +93,7 @@
 	    } else {
 		//console.log('aldisp checkbox changed ' + $(this).prop('id') + " not checked");
 		if ($(this).prop('id') == 'all') {
+		    $('td.nldp').css(  "border-bottom" ,  "1px solid black"  );
 		    $('td.nld').css(  "border-bottom" ,  "1px solid black"  );
 		    $('td.sah').css(  "border-bottom" ,  "1px solid black"  );
 		    $('td.vh').css(  "border-bottom" ,  "1px solid black"  );
@@ -97,6 +101,8 @@
 		    $('td.m').css(  "border-bottom" ,  "1px solid black"  );
 		    $('td.lld').css(  "border-bottom" ,  "1px solid black"  );
 		    $('.aldisp').prop('checked',false);
+		} else if ($(this).prop('id') == 'nldp') {
+		    $('td.nld').css(  "border-bottom" ,  "1px solid black"  );
 		} else if ($(this).prop('id') == 'nld') {
 		    $('td.nld').css(  "border-bottom" ,  "1px solid black"  );
 		} else if ($(this).prop('id') == 'sah') {
