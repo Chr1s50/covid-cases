@@ -1,0 +1,42 @@
+  body {
+    width: 100%;
+  }
+    table, th, td {
+    white-space: nowrap;
+    border: 1px solid black;
+    border-collapse: collapse;
+  }
+  td.data {
+    font-size:80%;
+  }
+  th.date {
+    font-size:50%;
+  }
+  th.name {
+    font-size:50%;
+  }
+  .smaller {
+    font-size:80%;
+  }
+  div.space10 {
+    height:10px;
+  }
+  div.space20 {
+    height:20px;
+  }
+  div#breadcrumb  {
+    font-size: 90%;
+  }  
+  a.breadcrumb:link {
+      text-decoration: none;
+  }
+  a.breadcrumb:visited {
+      text-decoration: none;
+  }
+  a.breadcrumb:hover {
+      text-decoration: underline;
+  }  
+  a.breadcrumb:active {
+      text-decoration: underline;
+  }
+     
